@@ -1,0 +1,226 @@
+@import 'variables';
+
+.mobile_menu {
+  background-color: white;
+  .inner {
+    background: white;
+  }
+}
+
+.menu-close {
+  position: relative;
+  width: $content-width;
+  max-width: $max-width;
+  margin: 50px auto 0;
+  a {
+    position: absolute;
+    top: -35px;
+    right: 3px;
+    font-size: 100px;
+    font-weight: lighter;
+    line-height: 0.6em;
+    color: $primary-color;
+    transition: all 200ms;
+    -webkit-transition: all 200ms;
+    -moz-transition: all 200ms;
+    -o-transition: all 200ms;
+    &:hover {
+      /* transform: rotate(90deg);
+      right: -5px; */
+      text-shadow: 0 0 2px gray;
+    }
+  }
+}
+
+.menu-list-wrapper {
+  width: $content-width;
+  height: 360px;
+  max-width: $max-width;
+  margin: 30vh auto 0;
+  transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 50%;
+    float: left;
+    &:nth-child(2) {
+      clear: left;
+    }
+    &:last-child {
+      margin-bottom: 80px;
+    }
+    li {
+      position: relative;
+      padding-left: 30px;
+      line-height: 1.8em;
+      &:before {
+        position: absolute;
+        top: 8px;
+        left: 10px;
+        content: '';
+        background: url("../../layout/menu-arrow.svg") no-repeat;
+        width: 14px;
+        height: 14px;
+      }
+      a {
+        position: relative;
+        color: black;
+        &:after {
+          position: absolute;
+          top: 20px;
+          left: 0;
+          content: '';
+          background-color: $primary-color;
+          width: 0;
+          height: 3px;
+          transition: all 350ms;
+          -webkit-transition: all 350ms;
+          -moz-transition: all 350ms;
+          -o-transition: all 350ms;
+        }
+        &:hover:after {
+          width: 100%;
+        }
+        &.active:after {
+          width: 100%;
+        }
+      }
+    }
+    hr {
+      width: 300px;
+      margin: 20px 0 20px 10px;
+      border: 0;
+      border-top: 1px solid $primary-color;
+      text-align: left;
+    }
+  }
+}
+
+.menu-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 250px;
+  background-color: $secondary-color;
+}
+
+.menu-footer-logo {
+  float: left;
+  width: 100px;
+  height: 100px;
+  margin-top: -50px;
+  margin-left: 8%;
+  background-color: white;
+  border-radius: 100%;
+  text-align: center;
+  box-shadow: 0 0 20px gray;
+  transition: all 350ms;
+  -webkit-transition: all 350ms;
+  -moz-transition: all 350ms;
+  -o-transition: all 350ms;
+  &:hover {
+    box-shadow: 0 0 40px gray;
+  }
+}
+
+.menu-footer-logo img {
+  width: 70%;
+  margin-top: 50%;
+  transform: translateY(-50%);
+  margin-left: 1px;
+}
+
+.menu-footer-info {
+  width: $content-width;
+  max-width: $max-width;
+  margin: 50px auto;
+  > div {
+    width: 50%;
+    float: left;
+  }
+}
+
+.menu-footer-address span {
+  display: block;
+  width: 62%;
+  &:first-child {
+    font-weight: bold;
+  }
+}
+
+.menu-footer-numbers {
+  width: 190px;
+  > div {
+    float: left;
+  }
+}
+
+.menu-footer-numbers-left {
+  width: 45px;
+}
+
+.menu-footer-numbers-right {
+  width: 145px;
+  a {
+    color: $font-color;
+    transition: all 200ms;
+    -webkit-transition: all 200ms;
+    -moz-transition: all 200ms;
+    -o-transition: all 200ms;
+    &:hover {
+      color: black;
+    }
+  }
+}
+
+.mobile-ruler {
+  display: none;
+}
+
+@media screen and (min-width: 1700px) {
+  .menu-footer-logo {
+    width: 200px;
+    height: 200px;
+    margin-top: -103px;
+  }
+}
+
+@media screen and (max-width: $smartphone-threshold) {
+  .menu-footer {
+    display: none;
+  }
+
+  .menu-list-wrapper {
+    margin: 100px auto 0;
+    transform: none;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -o-transform: none;
+    ul {
+      width: 100%;
+      float: none;
+      li {
+        line-height: 2.5em;
+        &:before {
+          top: 13px;
+        }
+      }
+      hr {
+        width: 90%;
+        max-width: 280px;
+      }
+    }
+  }
+
+  .menu-close a {
+    font-size: 65px;
+  }
+
+  .mobile-ruler {
+    display: block;
+  }
+}

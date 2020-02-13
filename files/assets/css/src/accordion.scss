@@ -1,0 +1,72 @@
+@import 'variables';
+
+.ce_accordion {
+  width: $content-width;
+  max-width: $max-width;
+  margin: 0 auto 10px;
+}
+
+.toggler {
+  position: relative;
+  width: 100%;
+  padding: 15px 10px;
+  background-color: $secondary-color;
+  cursor: pointer;
+  outline: none;
+  transition: all 200ms;
+  -webkit-transition: all 200ms;
+  -moz-transition: all 200ms;
+  -o-transition: all 200ms;
+  &:after {
+    position: absolute;
+    top: 13px;
+    right: 15px;
+    width: 25px;
+    height: 25px;
+    content: '';
+    background-image: url("../../layout/savth-arrow-down-black.svg");
+  }
+  &:hover {
+    background-color: $primary-color;
+  }
+  &.active,.ui-state-focus {
+    background-color: $primary-color;
+    &:after {
+      background-image: url("../../layout/savth-arrow-up-white.svg");
+    }
+  }
+}
+
+.accordion {
+  margin-right: -20px;
+  overflow: hidden;
+  p {
+    width: 95%;
+  }
+}
+
+#main .ce_accordion .ce_text {
+  width: 100%;
+  margin-bottom: 0;
+  padding: 15px 10px;
+  background-color: $quarternary-color;
+  p:first-child {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: $smartphone-threshold) {
+  .ce_accordion {
+    width: 92%;
+  }
+
+  #main .ce_accordion .toggler {
+    width: 96%;
+  }
+
+  .accordion {
+    width: 96%;
+    margin-right: 0;
+    padding-right: 20px;
+  }
+}

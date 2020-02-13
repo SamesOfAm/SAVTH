@@ -1,0 +1,22 @@
+<div class="layout_short arc_<?= $this->archive->id ?> block<?= $this->class ?>" itemscope itemtype="http://schema.org/Article">
+  <?php if ($this->hasMetaFields): ?>
+    <p class="info"><time datetime="<?= $this->datetime ?>" itemprop="datePublished"><?= $this->date ?></time> <?= $this->author ?> <?= $this->commentCount ?></p>
+  <?php endif; ?>
+
+  
+
+  <div class="ce_text block" itemprop="description">
+    <strong><?= $this->linkHeadline ?></strong><br>
+    <?php
+      $start = 0;
+      $laenge = 190;
+      if(strlen($this->teaser) > $laenge) {
+        $this->teaser =  $this->printTruncated(200, $this->teaser) . '...';
+      }
+      print $this->teaser;
+    ?>
+  </div>
+  <p class="more">
+  	<?= $this->more ?>
+  </p>
+</div>

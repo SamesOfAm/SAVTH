@@ -1,0 +1,65 @@
+@import "variables";
+
+.ce_form {
+  width: $content-width;
+  max-width: $max-width;
+  margin: 0 auto;
+  label {
+    display: inline-block;
+    width: 150px;
+    background-color: $primary-color;
+    padding: 15px;
+    text-transform: uppercase;
+    &[for=ctrl_22]{
+      line-height: 111px;
+      vertical-align: top;
+    }
+  }
+  input,textarea {
+    display: inline-block;
+    width: 500px;
+    padding: 17px;
+    margin: 5px;
+    border: none;
+    background-color: $quarternary-color;
+  }
+  textarea {
+    margin-top: 0;
+  }
+  button {
+    width: 179px;
+    margin: 50px 0 10px;
+    background-color: black;
+    border: none;
+    padding: 17px;
+    text-align: left;
+    font-family: 'Merriweather', sans-serif;
+    text-transform: uppercase;
+    color: white;
+    cursor: pointer;
+    transition: all 200ms;
+    -webkit-transition: all 200ms;
+    -moz-transition: all 200ms;
+    -o-transition: all 200ms;
+    &:hover {
+      background-color: $secondary-color;
+    }
+  }
+}
+
+@media screen and (max-width: $smartphone-threshold) {
+  .ce_form {
+    width: 92%;
+    label {
+      width: 92%;
+      padding: 17px;
+      &[for=ctrl_22] {
+        line-height: 1.5em;
+      }
+    }
+    input,textarea {
+      width: 92%;
+      margin: 0 0 20px 0;
+    }
+  }
+}

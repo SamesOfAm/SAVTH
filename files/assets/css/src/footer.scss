@@ -1,0 +1,220 @@
+@import "variables";
+
+#footer {
+  clear: both;
+  height: 350px;
+  margin-top: 115px;
+  background-color: $secondary-color;
+  .inside {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    width: $content-width;
+    max-width: $max-width;
+    margin: 0 auto;
+  }
+}
+
+.footer-logo-wrapper {
+  width: 215px;
+  height: 350px;
+  float: left;
+}
+
+.footer-logo {
+  position: absolute;
+  top: 65px;
+  width: 215px;
+  height: 215px;
+  background-color: white;
+  border-radius: 100%;
+  box-shadow: 0 0 20px gray;
+  text-align: center;
+  transition: box-shadow 350ms;
+  -webkit-transition: box-shadow 350ms;
+  -moz-transition: box-shadow 350ms;
+  -o-transition: box-shadow 350ms;
+  &:hover {
+    box-shadow: 0 0 40px gray;
+  }
+  img {
+    width: 63%;
+    margin-top: 50%;
+    margin-left: 7px;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+  }
+}
+
+.footer-info {
+  position: relative;
+  z-index: 1;
+  float: left;
+  width: 33%;
+  margin-top: 65px;
+  font-size: 14px;
+  line-height: 1.5em;
+}
+
+.footer-name {
+  padding-bottom: 15px;
+  border-bottom: 1px solid $font-color;
+}
+
+.footer-address {
+  padding: 15px 0;
+  border-bottom: 1px solid $font-color;
+}
+
+.footer-contact {
+  float: left;
+  margin-top: 15px;
+  a {
+    transition: all 200ms;
+    -webkit-transition: all 200ms;
+    -moz-transition: all 200ms;
+    -o-transition: all 200ms;
+    &:hover {
+      color: black;
+    }
+  }
+}
+
+.contact-left {
+  width: 45px;
+  margin-right: 50px;
+}
+
+.contact-right {
+  width: 140px;
+  a {
+    color: $font-color;
+  }
+}
+
+.footer-contact-mobile {
+  display: none;
+}
+
+.footer-logos {
+  float: left;
+  width: 24%;
+  margin-top: 71px;
+  img {
+    width: 100%;
+  }
+}
+
+.kvt-logo {
+  padding: 0 0 30px 35px;
+  transition: all 100ms;
+  &:hover {
+    -webkit-filter: drop-shadow(0 0 2px rgba(0, 0, 0, .7));
+    filter: drop-shadow(0 0 2px rgba(0, 0, 0, .7));
+  }
+}
+
+.footer-logos-ruler {
+  border: 0;
+  border-top: 1px solid black;
+}
+
+.thueringen-logo {
+  margin-top: 35px;
+  padding-left: 35px;
+  transition: all 100ms;
+  &:hover {
+    -webkit-filter: drop-shadow(0 0 2px rgba(0, 0, 0, .7));
+    filter: drop-shadow(0 0 2px rgba(0, 0, 0, .7));
+  }
+}
+
+@media screen and (max-width: $smartphone-threshold){
+  #footer {
+    height: 675px;
+    .inside {
+      display: initial;
+    }
+  }
+
+  .footer-logo-wrapper {
+    width: 100%;
+    height: initial;
+  }
+
+  .footer-logo {
+    position: initial;
+    margin: -105px auto 0;
+  }
+
+  .footer-info {
+    width: 100%;
+    margin-bottom: 60px;
+  }
+
+  .footer-name {
+    width: 90%;
+    max-width: 270px;
+    text-align: center;
+    margin: 0 auto;
+    font-weight: bold;
+  }
+
+  .footer-address {
+    width: 90%;
+    max-width: 270px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .footer-contact {
+    display: none;
+  }
+
+  .footer-contact-mobile {
+    width: 90%;
+    max-width: 270px;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    line-height: 1.5em;
+    span {
+      display: block;
+      a {
+        color: $font-color;
+      }
+    }
+  }
+
+  .footer-logos {
+    float: none;
+    width: 100%;
+  }
+
+  .kvt-logo {
+    padding: 0;
+    height: 435px;
+    width: 90%;
+    margin: 110px auto;
+    text-align: center;
+    max-width: 270px;
+  }
+
+  .footer-logos-ruler {
+    width: 270px;
+  }
+
+  .thueringen-logo {
+    padding-left: 0;
+    width: 90%;
+    margin: 30px auto;
+    text-align: center;
+    max-width: 270px;
+  }
+
+  .footer-logos img {
+    width: 75%;
+  }
+}

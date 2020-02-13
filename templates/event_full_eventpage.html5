@@ -1,0 +1,50 @@
+
+<div class="event layout_full block<?= $this->class ?>" itemscope itemtype="http://schema.org/Event">
+
+  <div class="event-left"><p class="info"><time datetime="<?= $this->datetime ?>" itemprop="startDate"><?= $this->date ?><?php if ($this->time): ?>, <?= $this->time ?><?php endif; ?></time></p></div>
+  <section class="event-right ce_accordionStart ce_accordion block">
+    <div class="toggler ui-accordion-header ui-corner-top ui-accordion-header-collapsed ui-corner-all ui-state-default ui-accordion-icons" role="tab" id="ui-id-1" aria-controls="ui-id-2" aria-selected="false" aria-expanded="false" tabindex="0">
+      <h3 itemprop="name"><?= $this->title ?></h3>
+    </div>
+    <div class="accordion ui-accordion-content ui-corner-bottom ui-helper-reset ui-widget-content" style="display: none;" id="ui-id-2" aria-labelledby="ui-id-1" role="tabpanel" aria-hidden="true">
+      <div>
+    <?php if ($this->recurring): ?>
+      <p class="recurring"><?= $this->recurring ?><?php if ($this->until) echo ' ' . $this->until; ?>.</p>
+    <?php endif; ?>
+
+    <?php if ($this->hasDetails): ?>
+      <?= $this->details ?>
+    <?php else: ?>
+      <div class="ce_text block">
+        <?php if (!$this->addBefore): ?>
+          <?= $this->teaser ?>
+        <?php endif; ?>
+
+        <?php if ($this->addImage): ?>
+          <?php $this->insert('image', $this->arrData); ?>
+        <?php endif; ?>
+
+        <?php if ($this->addBefore): ?>
+          <?= $this->teaser ?>
+        <?php endif; ?>
+      </div>
+    <?php endif; ?>
+
+    <?php if ($this->location): ?>
+      <p class="location"><?= $this->locationLabel ?>: <?= $this->location ?></p>
+    <?php endif; ?>
+      </div>
+    </div>
+  </section>
+
+  <?php if ($this->enclosure): ?>
+    <ul class="enclosure">
+      <?php foreach ($this->enclosure as $enclosure): ?>
+        <li class="download-element ext-<?= $enclosure['extension'] ?>">
+           <a href="<?= $enclosure['href'] ?>" title="<?= $enclosure['title'] ?>"><?= $enclosure['link'] ?> <span class="size">(<?= $enclosure['filesize'] ?>)</span></a>
+        </li>
+      <?php endforeach; ?>
+    </ul>
+  <?php endif; ?>
+
+</div>

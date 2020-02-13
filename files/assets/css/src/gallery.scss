@@ -1,0 +1,37 @@
+@import 'variables';
+
+#main .ce_accordion .ce_gallery {
+  width: 100%;
+  padding: 10px;
+  background-color: $quarternary-color;
+  ul {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    li {
+      width: 13%;
+      figure {
+        height: auto;
+      }
+      &:before {
+        content: '';
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $smartphone-threshold) {
+  #main .ce_accordion .ce_gallery ul {
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-left: 0;
+    padding-right: 4%;
+    li {
+      width: 44%;
+      .image_container {
+        margin: 0;
+      }
+    }
+  }
+}
