@@ -25,7 +25,7 @@
         <li><a href="ausschreibungen.html">Ausschreibungen</a></li>
         <li><a href="pressespiegel.html">Pressearchiv</a></li>
         <hr>
-        <li><a href="http://www.hausarzt-werden-in-thueringen.de/index.php?id=16">Seminar- und Mentoringprogramm</a></li>
+        <li><a href="https://www.hausarzt-werden-in-thueringen.de/seminar-und-mentoringprogramm.html">Seminar- und Mentoringprogramm</a></li>
         <hr>
         <li><a href="https://www.savth.de/messageboard.html">SAVTH Forum</a></li>
         <li><a href="kontakt.html">Kontakt</a></li>
