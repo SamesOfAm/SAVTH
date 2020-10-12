@@ -350,7 +350,7 @@ input[type=search],.search-form input[type=text] {
   }
 
   .news-desktop {
-    display: none;
+    //display: none;
   }
 
   .pdf-iframe {
@@ -375,4 +375,14 @@ input[type=search],.search-form input[type=text] {
   .pdf-iframe {
     height: 300px;
   }
+  .slider-control .slider-prev {
+    left:-55px;
+  }
+  .slider-control a {
+    width:32px;
+  }
+  .slider-control .slider-next {
+    right:-52px;
+  }
+
 }
