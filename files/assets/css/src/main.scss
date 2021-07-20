@@ -99,7 +99,7 @@ p {
 }
 
 
-#main .ce_text {
+#main .ce_text,#main .ce_image {
   width: $content-width;
   max-width: $max-width;
   margin: 0 auto 50px;

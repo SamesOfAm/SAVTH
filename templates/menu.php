@@ -10,6 +10,7 @@
         <li><a href="foerderer-der-stiftung.html">Förderer der Stiftung</a></li>
         <hr>
         <li><a href="Famulaturen.html">Famulaturen</a></li>
+        <li><a href="mentoren-projekt.html">Mentoren-Projekt</a></li>
         <li><a href="blockpraktika-im-laendlichen-raum.html">Blockpraktika im ländlichen Raum</a></li>
         <li><a href="Praktisches_Jahr.html">Praktisches Jahr</a></li>
         <li><a href="thueringen-stipendium.html">Thüringen-Stipendium</a></li>

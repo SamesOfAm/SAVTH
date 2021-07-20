@@ -7,7 +7,7 @@
 </div>
 <div class="footer-info">
     <div class="footer-name">
-        <span>Stiftung für Förderung der ambulanten ärztlichen Versorgung im Freistaat Thüringen</span>
+        <span>Stiftung zur Förderung der ambulanten ärztlichen Versorgung im Freistaat Thüringen</span>
     </div>
     <div class="footer-address">
         <span>Zum Hospitalgraben 8, 99425 Weimar</span>
