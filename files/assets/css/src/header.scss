@@ -1,40 +1,5 @@
 @import 'variables';
 
-.mod_customnav {
-  position: relative;
-  width: $content-width;
-  max-width: $max-width;
-  margin: 0 auto;
-  ul {
-    position: absolute;
-    top: 1.65vw;
-    margin-top: 20px;
-    padding: 0;
-    list-style: none;
-    li {
-      float: left;
-      &:not(:last-child)::after {
-        content: ' | ';
-        white-space: pre;
-      }
-      a {
-        color: $font-color;
-        text-transform: uppercase;
-        transition: all 200ms;
-        -webkit-transition: all 200ms;
-        -moz-transition: all 200ms;
-        -o-transition: all 200ms;
-        &:hover {
-          color: black;
-        }
-      }
-      span {
-        color: $font-color;
-        text-transform: uppercase;
-      }
-    }
-  }
-}
 
 .mod_mobile_menu {
   width: $content-width;
@@ -152,10 +117,6 @@
     background-repeat: no-repeat;
     background-position: 48% 20%;
     background-size: 1098px;
-  }
-
-  .mod_customnav {
-    display: none;
   }
 
   .logo {

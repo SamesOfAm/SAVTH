@@ -18,12 +18,13 @@
         <span>Fax</span>
     </div>
     <div class="footer-contact contact-right">
-        <span>info[ at ]savth.de</span>
+        <span><a href="mailto:info@savth.de">info@savth.de</a></span>
         <span><a href="tel:+493643559950">03643 559-950</a></span>
         <span><a href="tel:+493643559951">03643 559-951</a></span>
     </div>
+    {{insert_module::28}}
     <div class="footer-contact-mobile">
-        <span><a href="mailto:info@savth.de"> Mail info[ at ]savth.de</a></span>
+        <span><a href="mailto:info@savth.de"> Mail info@savth.de</a></span>
         <span><a href="tel:+493643559950">Fon 03643 559-950</a></span>
         <span><a href="tel:+493643559951">Fax 03643 559-951</a></span>
     </div>

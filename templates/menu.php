@@ -3,7 +3,8 @@
 </div>
 <div class="menu-list-wrapper">
     {{insert_module::34}}
-    <ul class="menu-list">
+    {{insert_module::80}}
+    <!--<ul class="menu-list">
         <li><a href="startseite.html">Startseite</a></li>
         <li><a href="ueber-die-stiftung.html">Über die Stiftung</a></li>
         <li><a href="stiftungssatzung.html">Stiftungssatzung</a></li>
@@ -32,7 +33,7 @@
         <li><a href="kontakt.html">Kontakt</a></li>
         <li><a href="impressum.html">Impressum</a></li>
         <li><a href="datenschutz.html">Datenschutz</a></li>
-    </ul>
+    </ul>-->
 </div>
 <div class="menu-footer">
     <div class="menu-footer-logo">

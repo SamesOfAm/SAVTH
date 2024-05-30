@@ -13,6 +13,37 @@
     max-width: $max-width;
     margin: 0 auto;
   }
+  .mod_customnav {
+    margin: 0 auto;
+    clear: both;
+    ul {
+      padding: 0;
+      list-style: none;
+      li {
+        float: left;
+        &:not(:last-child)::after {
+          content: ' | ';
+          white-space: pre;
+        }
+        a {
+          color: $font-color;
+          text-transform: uppercase;
+          transition: all 200ms;
+          -webkit-transition: all 200ms;
+          -moz-transition: all 200ms;
+          -o-transition: all 200ms;
+          &:hover {
+            color: black;
+          }
+        }
+        span {
+          color: $font-color;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+
 }
 
 .footer-logo-wrapper {
@@ -171,6 +202,13 @@
 
   .footer-contact {
     display: none;
+  }
+
+  .mod_customnav {
+    height: 1.5em;
+    margin: 0 auto;
+    display: block;
+    width: 210px;
   }
 
   .footer-contact-mobile {

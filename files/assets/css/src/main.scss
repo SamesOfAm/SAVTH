@@ -35,24 +35,13 @@ p {
   a {
     position: relative;
     color: $primary-color;
-    &:after {
-      position: absolute;
-      top: 18px;
-      left: 0;
-      content: '';
-      width: 0;
-      height: 3px;
-      background-color: $primary-color;
-      transition: width 200ms;
-    }
-    &:hover:after {
-      width: 100%;
-    }
-    &:visited {
-      color: $primary-color;
-    }
-    &:focus {
-      color: $primary-color;
+    background-image: linear-gradient(#95d600, #95d600);
+    background-position: 3% 100%;
+    background-size: 0% 3px;
+    background-repeat: no-repeat;
+    transition: background-size 250ms;
+    &:hover {
+      background-size: 100% 3px;
     }
   }
 }
@@ -99,15 +88,25 @@ p {
 }
 
 
-#main .ce_text,#main .ce_image {
+#main .ce_text,#main .ce_image,#main .ce_player {
   width: $content-width;
   max-width: $max-width;
   margin: 0 auto 50px;
 }
 
+.ce_player {
+  figure {
+    margin: 0;
+    width: 100%;
+    video {
+      width: 100%;
+    }
+  }
+}
+
 #main .image_container {
   margin: 70px 0 0;
-  height: 34vw;
+  // height: 34vw;
   overflow: hidden;
   img {
     width: 100%;
@@ -121,6 +120,7 @@ p {
 
 .ce_sliderStart {
   position: relative;
+  margin-bottom: 80px;
   padding-top: 35px;
   padding-bottom: 20px;
   background-color: $secondary-color;
